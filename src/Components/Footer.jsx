@@ -7,7 +7,9 @@ import { useLocation } from 'react-router-dom';
 const Footer = () => {
   const location = useLocation();
 
-  const hideAllFotter = location.pathname.startsWith('/confirm');
+  const hideAllFotter =
+    location.pathname.startsWith('/confirm') ||
+    location.pathname.startsWith('/verified');
   return (
     <>
       {hideAllFotter ? null : (

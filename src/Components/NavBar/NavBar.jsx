@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import a from '../images/logo1.svg';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 // import Dropdown from 'react-bootstrap/Dropdown';
 
 import { BsGlobe } from 'react-icons/bs';
@@ -73,7 +74,9 @@ const NavBar = ({ step, setStep }) => {
           <Navbar.Brand className="width">
             <div>
               <div style={{ color: 'white' }}>
-                <img src={a} alt="" />
+                <Link to="/">
+                  <img src={a} alt="" />
+                </Link>
               </div>
             </div>
           </Navbar.Brand>
