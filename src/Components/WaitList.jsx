@@ -41,7 +41,9 @@ const WaitList = () => {
       setEmail('');
       setFullname('');
       setLoading(false);
-      alert('You have been added to the waitlist');
+      alert(
+        'Please check your mail a confirmation email has been sent to you. '
+      );
       await sendConfirmationEmail();
     } catch (error) {
       alert(error.text);
