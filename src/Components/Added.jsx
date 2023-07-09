@@ -34,7 +34,7 @@ const Added = () => {
       <h1>Confirmed List</h1>
       <ul className="mt-4">
         {confirmedList.map((person) => (
-          <li key={person.id}>
+          <li key={person.id} className="mb-4">
             <div>full name : {person.fullname}</div>
             <div>email : {person.email}</div>
             <div>phone number : {person.phoneNumber}</div>
