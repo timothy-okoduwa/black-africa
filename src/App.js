@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react';
+import Footer from './Components/Footer';
+import NavBar from './Components/NavBar/NavBar';
+import Black from './pages/Black/Black';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Confirmation from './Components/Confirmation';
 function App() {
+  const [step, setStep] = useState(1);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar step={step} setStep={setStep} />
+      <Routes>
+        <Route path="/" element={<Black step={step} setStep={setStep} />} />
+        <Route path="/confirm/:uniqueIdentifier" element={<Confirmation />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
