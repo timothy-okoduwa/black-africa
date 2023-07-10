@@ -502,3 +502,42 @@
 .disabled {
   cursor: not-allowed;
 }
+.cent {
+  display: flex;
+  justify-content: center;
+}
+.centxx {
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: red; */
+}
+
+.xent {
+  width: 20%;
+  object-fit: contain;
+}
+.xhim {
+  margin-top: -50px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+.conf {
+  color: var(--black, #000);
+  text-align: center;
+  font-family: Russo One;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+.tknu {
+  color: #151414;
+  text-align: center;
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: -30px;
+}
